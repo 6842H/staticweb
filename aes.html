@@ -96,24 +96,33 @@ function decodeAES(encrypted, key, iv, m, p){
 
 
 function init(){
-	url = new URL(location.href);
-	method = url.searchParams.get('method');	
-	data = url.searchParams.get('data');	
-	data = data.replace(/\\n/g, '').replace(/\\\//g, '/').replace(/\s/g, '+');
-	key = url.searchParams.get('key');
-	iv = url.searchParams.get('iv');
-	mode = url.searchParams.get('mode');
-	padd = url.searchParams.get('padd');
-	console.debug(data, key, iv, mode, padd);
-	var r = '';
-	if(method && method.toUpperCase().startsWith('D')){
-		r = decodeAES(data, key, iv, mode, padd);
-	}else{
-		r = encodeAES(data, key, iv, mode, padd);
+	var res = {};
+	var url = new URL(location.href);	
+	var data = url.searchParams.get('data');
+	var result = null;
+	try{
+		if(data){
+			data = data.replace(/\\n/g, '').replace(/\\\//g, '/').replace(/\s/g, '+');
+			var method = url.searchParams.get('method');
+			var key = url.searchParams.get('key');
+			var iv = url.searchParams.get('iv');
+			var mode = url.searchParams.get('mode');
+			var padd = url.searchParams.get('padd');
+			mode = mode ? mode : 'CBC';
+			console.debug(data, key, iv, mode, padd);		
+			if(method && method.toUpperCase().startsWith('D')){
+				result = decodeAES(data, key, iv, mode, padd);
+			}else{
+				result = encodeAES(data, key, iv, mode, padd);
+			}
+			res = {code:0, msg:'succeed', result:result};
+		}else{
+			res = {code:-1, msg:'the params "data" and "mode" are both required', result:result};
+		}
+	}catch(err){
+		res = {code:-2, msg:'error', result:result};
 	}	
-	console.debug(r);
-	console.debug(typeof r);
-	document.write(r);
+	document.write(JSON.stringify(res));
 }
 
 
