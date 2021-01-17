@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>黑色时间轴个人博客模板</title>
+    <meta name="keywords" content="黑色模板,个人网站模板,个人博客模板,博客模板,css3,html5,网站模板"/>
+    <meta name="description" content="这是一个有关黑色时间轴的css3 html5 网站模板"/>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/animation.css" rel="stylesheet">
+    <!-- 返回顶部调用 begin -->
+    <link href="./css/lrtk.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/js.js"></script>
+    <!-- 返回顶部调用 end-->
+    <!--[if lt IE 9]>
+    <script src="./js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <nav id="nav">
+        <ul>
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./view.html" target="_blank" title="Part2">Part2</a></li>
+            <li><a href="./view.html" target="_blank" title="Part3">Part2</a></li>
+            <div id="weather"></div>
+        </ul>
+        <script src="./js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+    </nav>
+</header>
+<!--header end-->
+<div id="mainbody">
+    <div class="info">
+        <figure><img src="./images/art.jpg" alt="dd">
+            <figcaption>
+                <strong>这里</strong>
+                这里
+            </figcaption>
+        </figure>
+        <div class="card" id="mp">
+            <h1>我的名片</h1>
+            <p>名字：<span id="mp_name">名字</span></p>
+            <p>爱好：<span id="mp_holic">爱好</span></p>
+            <p>电话：<span id="mp_phone">电话</span></p>
+            <p>邮箱：<span id="mp_email">Email</span></p>
+
+            <ul class="linkmore">
+                <li><a href="./talk" class="talk" title="给我留言"></a></li>
+                <li><a href="mailto:guoyn0@qq.com" class="email" title="给我写信"></a></li>
+                <li><a href="/" class="photos" title="生活照片"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--info end-->
+    <div class="blank"></div>
+    <div class="blogs" >
+        <ul class="bloglist" >
+            <li style="display: none;">
+                <div class="arrow_box" >
+                    <div class="ti"></div>
+                    <div class="ci"></div>
+                    <a class="arrow_box_url" href="/" target="_blank"><h2 class="title">title</h2></a>
+                    <ul class="textinfo">
+                        <a class="arrow_box_url" href="/" target="_blank"><img class="arrow_box_img" src="images/s1.jpg" /></a>
+                        <p class="content">content</p>
+                    </ul>
+                    <ul class="details">
+                        <li class="likes">10</li>
+                        <li class="comments">34</li>
+                        <li class="icon-time">2013-8-7</li>
+                    </ul>
+                </div>
+                <!--arrow_box end-->
+            </li>
+            <div class="load_more" ><a href="javascript:alert('加载更多')" title="加载更多" >加载更多</a></div>
+        </ul>
+
+        <!--bloglist end-->
+        <aside>
+            <div class="search">
+                <form class="searchform" method="get" action="#">
+                    <input type="text" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'">
+                </form>
+            </div>
+            <div class="viny">
+                <dl>
+                    <dt class="art"><div><img id="song_img" src="./images/artwork.png" alt="专辑"></div></dt>
+                    <dd class="icon-song"><span></span>歌名：<a id="song_name">南方姑娘</a></dd>
+                    <dd class="icon-album"><span></span>专辑：<a id="song_album">《赵小雷》</a></dd>
+                    <dd class="icon-artist"><span></span>歌手：<a id="song_singer">赵小</a></dd>
+                    <dd class="icon-like"><span></span><a id="song_agree" href="javascript:alert('ok')">123</a></dd>
+                    <dd class="music">
+                        <audio id="song_url" src="./images/nf.mp3" controls></audio>
+                    </dd>
+                </dl>
+            </div>
+            <div class="tuijian">
+                <h2>热门点击</h2>
+                <ol id="hot_click">
+                    <li ><span><strong>1</strong></span><a href="/" target="_blank">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+                </ol>
+            </div>
+            <div class="clicks">
+                <h2>最新发布</h2>
+                <ol id="last_pub">
+                    <li><span>2020-12-12</span><a href="/" target="_blank">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+                </ol>
+            </div>
+        </aside>
+    </div>
+    <!--blogs end-->
+</div>
+<!--mainbody end-->
+
+
+<footer>
+    <div class="footer-mid">
+        <div class="links" style="text-align: center; margin-left: 30%">
+            <h2>友情链接</h2>
+            <ul>
+                <li><a href="https://github.com/6842H">Github</a></li>
+            </ul>
+        </div>
+
+        <section class="flickr">
+            <h2>公众号: DoraBox</h2>
+            <ul>
+                <li><a href="/"><img src="./images/dorabox.jpg"></a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright: all right reserved</p>
+    </div>
+</footer>
+
+<!-- jQuery仿腾讯回顶部和建议 代码开始 -->
+<div id="tbox">
+    <!--<a id="togbook" href="javascript:void(0);"></a>-->
+    <a id="gotop" href="javascript:void(0)"></a>
+</div>
+<!-- 代码结束 -->
+
+
+</body>
+
+
+
+<script src="./js/generate_index.js"></script>
+</html>

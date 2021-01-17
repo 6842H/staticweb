@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>view-黑色时间轴个人博客模板</title>
+    <meta name="keywords" content="黑色模板,个人网站模板,个人博客模板,博客模板,css3,html5,网站模板"/>
+    <meta name="description" content="这是一个有关黑色时间轴的css3 html5 网站模板"/>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/view.css" rel="stylesheet">
+    <!-- 返回顶部调用 begin -->
+    <link href="css/lrtk.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <!-- 返回顶部调用 end-->
+    <!--[if lt IE 9]>
+    <script src="js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <nav id="nav">
+        <ul>
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./view.html" target="_blank" title="Part2">Part2</a></li>
+            <li><a href="./view.html" target="_blank" title="Part3">Part3</a></li>
+        </ul>
+        <script src="js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+    </nav>
+</header>
+<!--header end-->
+
+
+<div id="mainbody">
+    <div class="blogs">
+        <div id="index_view">
+
+            <h1 class="c_titile" id="blog_title">c_titile</h1>
+            <p class="box">
+                发布时间：<span id="blog_create_time">2013-07-25</span>
+                编辑：<span id="blog_author">DanceSmile</span>
+                浏览: <span id="blog_watched">30</span>
+            </p>
+            <ul id="blog_content">
+                <p> 一段一个p，一张图片一个p</p>
+                <p><img src="images/post1.jpg"></p>
+            </ul>
+
+            <h2 class="t_nav">评论
+                <!--<a href="javascript:void(0);">评论</a>-->
+            </h2>
+                <div class="visitors" id="visitors">
+                    <dl>
+                        <hr>
+                        <time>2020-12-12 12:12:12</time>
+                        <span>ddd</span>：<a href="javascript:reply(this);" style="color: red">回复</a>
+                        <p>我手机里面也有这样一个号码存在</p>
+
+                    </dl>
+                </div>
+
+                <div class="reply_main">
+                    <textarea name='tt' rows='100'></textarea>
+                    <br/>
+                    <input type='submit' value='发表'/>
+
+                </div>
+        </div>
+
+
+        <!--bloglist end-->
+        <aside>
+            <div class="search">
+                <form class="searchform" method="get" action="#">
+                    <input type="text" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'">
+                </form>
+            </div>
+
+            <div class="toppic">
+                <h2>相关文章</h2>
+                <ul id="related_article">
+                    <li>
+                        <a href="/">
+                            <img src="images/k01.jpg">
+                            <span class="related_article_title">会画画！</span>
+                            <p>浏览&nbsp;<span class="related_article_watched">12</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+    <!--blogs end-->
+</div>
+<!--mainbody end-->
+
+
+<footer>
+    <div class="footer-mid">
+        <div class="links" style="text-align: center; margin-left: 30%">
+            <h2>友情链接</h2>
+            <ul>
+                <li><a href="https://github.com/6842H">Github</a></li>
+            </ul>
+        </div>
+
+        <section class="flickr">
+            <h2>公众号: DoraBox</h2>
+            <ul>
+                <li><a href="/"><img src="./images/dorabox.jpg"></a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright: all right reserved</p>
+    </div>
+</footer>
+<!-- jQuery仿腾讯回顶部和建议 代码开始 -->
+<div id="tbox">
+    <a id="gotop" href="javascript:void(0)"></a>
+    <a id="togbook" href="javascript:void(0);"></a>
+</div>
+<!-- 代码结束 -->
+</body>
+<script src="./js/generate_view.js"></script>
+</html>
